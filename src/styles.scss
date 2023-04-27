@@ -1,3 +1,83 @@
-body {
-    background-color: green;
+@import './normalize.scss';
+@import './styles/variables.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: $bg;
+    height: 100vh;
+    padding: 10%;
+}
+
+.header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $secondary-dark;
+    font-size: 5rem;
+    text-transform: uppercase;
+    animation: pulsate 3s linear infinite;
+    letter-spacing: 0.6rem;
+}
+
+.entry-field {
+    border: 2px solid $secondary-dark;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 40%;
+    width: 100%;
+    border-radius: 10px;
+    background-color: transparent;
+    margin-top: 4rem;
+    color: $primary;
+    font-size: 2rem;
+    padding: 20px;
+}
+
+.keyboard-container {
+    width: 100%;
+    height: 32vh;
+    border: 2px solid $secondary-dark;
+    border-radius: 10px;
+    margin-top: 3rem;
+    padding: 20px;
+}
+
+.row-wrapper {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(14, 1fr);
+    gap: 10px;
+}
+
+.button-default {
+    position: relative;
+    border: 2px solid $secondary;
+    background-color: transparent;
+    border-radius: 6px;
+    padding: 5px 2px;
+    color: $primary;
+}
+
+.button-keydown {
+    background-color: $primary;
+    color: black;
+}
+
+.button-first-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button-second-text {
+    position: absolute;
+    left: 6px;
+    top: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@keyframes pulsate {
+    50% {
+        color: $primary;
+        text-shadow: 0 0 5px $primary, 0 0 5px $primary;
+    }
 }
