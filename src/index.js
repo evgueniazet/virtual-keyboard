@@ -1,7 +1,7 @@
 import './styles.scss';
 import { addRow } from './scripts/addRow';
 import { data } from './data';
-import { handleKeyDown } from './scripts/handleKeyDown';
+import { handleButton } from './scripts/handleButton';
 
 const createWrapper = () => {
     const body = document.querySelector('body');
@@ -25,4 +25,4 @@ const createWrapper = () => {
 };
 createWrapper();
 addRow(data);
-handleKeyDown();
+handleButton();

@@ -24,9 +24,6 @@ export const addRow = (array) => {
          button.appendChild(buttonSecondText);
          buttonSecondText.append(element.second);
       }
-
-
-
    })
 };
 

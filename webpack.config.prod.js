@@ -1,9 +1,7 @@
 const path = require('path');
-const { merge } = require('webpack-merge');
-const commonConfig = require('./webpack.config.common');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = merge(commonConfig, {
+module.exports =  {
     mode: 'production',
     output: {
         filename: 'bundle.[contenthash].js',
@@ -26,4 +24,4 @@ module.exports = merge(commonConfig, {
             }
         ]
     },
-});
+};
