@@ -1,211 +1,295 @@
-export const data = [
+const data = [
+  [
     {
-        first: '`',
-        second: '~',
+      first: '`',
+      second: '~',
+      classes: ['button'],
     },
     {
-        first: '1',
-        second: '!',
+      first: '1',
+      second: '!',
+      classes: ['button'],
     },
     {
-        first: '2',
-        second: '@',
+      first: '2',
+      second: '@',
+      classes: ['button'],
     },
     {
-        first: '3',
-        second: '#',
+      first: '3',
+      second: '#',
+      classes: ['button'],
     },
     {
-        first: '4',
-        second: '$',
+      first: '4',
+      second: '$',
+      classes: ['button'],
     },
     {
-        first: '5',
-        second: '%',
+      first: '5',
+      second: '%',
+      classes: ['button'],
     },
     {
-        first: '6',
-        second: ':',
+      first: '6',
+      second: ':',
+      classes: ['button'],
     },
     {
-        first: '7',
-        second: '?',
+      first: '7',
+      second: '?',
+      classes: ['button'],
     },
     {
-        first: '8',
-        second: '*',
+      first: '8',
+      second: '*',
+      classes: ['button'],
     },
     {
-        first: '9',
-        second: '(',
+      first: '9',
+      second: '(',
+      classes: ['button'],
     },
     {
-        first: '0',
-        second: ')',
+      first: '0',
+      second: ')',
+      classes: ['button'],
     },
     {
-        first: '-',
-        second: '_',
+      first: '-',
+      second: '_',
+      classes: ['button'],
     },
     {
-        first: '=',
-        second: '+',
+      first: '=',
+      second: '+',
+      classes: ['button'],
     },
     {
-        first: 'Backspace'
+      first: 'Backspace',
+      classes: ['button-selected', 'button-backspace'],
     },
+  ],
+  [
     {
-        first: 'Tab'
+      first: 'Tab',
+      classes: ['button-selected'],
     },
     {
-        first: 'Q'
+      first: 'Q',
+      classes: ['button'],
     },
     {
-        first: 'W'
+      first: 'W',
+      classes: ['button'],
     },
     {
-        first: 'E'
+      first: 'E',
+      classes: ['button'],
     },
     {
-        first: 'R'
+      first: 'R',
+      classes: ['button'],
     },
     {
-        first: 'T'
+      first: 'T',
+      classes: ['button'],
     },
     {
-        first: 'Y'
+      first: 'Y',
+      classes: ['button'],
     },
     {
-        first: 'U'
+      first: 'U',
+      classes: ['button'],
     },
     {
-        first: 'I'
+      first: 'I',
+      classes: ['button'],
     },
     {
-        first: 'O'
+      first: 'O',
+      classes: ['button'],
     },
     {
-        first: 'P'
+      first: 'P',
+      classes: ['button'],
     },
     {
-        first: '['
+      first: '[',
+      classes: ['button'],
     },
     {
-        first: ']'
+      first: ']',
+      classes: ['button'],
     },
     {
-        first: "'\'",
-        second: '/'
+      /* eslint-disable */
+      first: "'\'",
+      second: '/',
+      classes: ['button'],
     },
     {
-        first: 'Caps Lock'
+      first: 'DEL',
+      classes: ['button-selected'],
     },
+  ],
+  [
     {
-        first: 'A'
+      first: 'CapsLock',
+      classes: ['button-selected', 'button-capslock'],
     },
     {
-        first: 'S'
+      first: 'A',
+      classes: ['button'],
     },
     {
-        first: 'D'
+      first: 'S',
+      classes: ['button'],
     },
     {
-        first: 'F'
+      first: 'D',
+      classes: ['button'],
     },
     {
-        first: 'G'
+      first: 'F',
+      classes: ['button'],
     },
     {
-        first: 'H'
+      first: 'G',
+      classes: ['button'],
     },
     {
-        first: 'J'
+      first: 'H',
+      classes: ['button'],
     },
     {
-        first: 'K'
+      first: 'J',
+      classes: ['button'],
     },
     {
-        first: 'L'
+      first: 'K',
+      classes: ['button'],
     },
     {
-        first: ';'
+      first: 'L',
+      classes: ['button'],
     },
     {
-        first: "'"
+      first: ';',
+      classes: ['button'],
     },
     {
-        first: 'Enter'
+      first: "'",
+      classes: ['button'],
     },
     {
-        first: 'Shift'
+      first: 'ENTER',
+      classes: ['button-selected', 'button-enter'],
     },
+  ],
+  [
     {
-        first: "'\'"
+      first: 'Shift',
+      classes: ['button-selected', 'button-shift'],
+      value: true,
     },
     {
-        first: 'Z'
+      /* eslint-disable */
+      first: "'\'",
+      classes: ['button'],
     },
     {
-        first: 'X'
+      first: 'Z',
+      classes: ['button'],
     },
     {
-        first: 'C'
+      first: 'X',
+      classes: ['button'],
     },
     {
-        first: 'V'
+      first: 'C',
+      classes: ['button'],
     },
     {
-        first: 'B'
+      first: 'V',
+      classes: ['button'],
     },
     {
-        first: 'N'
+      first: 'B',
+      classes: ['button'],
     },
     {
-        first: 'M'
+      first: 'N',
+      classes: ['button'],
     },
     {
-        first: '.'
+      first: 'M',
+      classes: ['button'],
     },
     {
-        first: ','
+      first: '.',
+      classes: ['button'],
     },
     {
-        first: '/'
+      first: ',',
+      classes: ['button'],
     },
     {
-        first: ']'
+      first: '/',
+      classes: ['button'],
     },
     {
-        first: '&#8593'
+      first: ']',
+      classes: ['button'],
     },
     {
-        first: 'Shift'
+      first: '&#8593;',
+      classes: ['button-selected'],
     },
     {
-        first: 'Ctrl'
+      first: 'Shift',
+      classes: ['button-selected'],
     },
+  ],
+  [
     {
-        first: 'Win'
+      first: 'Ctrl',
+      classes: ['button-selected'],
     },
     {
-        first: 'Alt'
+      first: 'Win',
+      classes: ['button-selected'],
     },
     {
-        first: ''
+      first: 'Alt',
+      classes: ['button-selected'],
     },
     {
-        first: 'Alt'
+      first: '',
+      classes: ['button-space'],
     },
     {
-        first: 'Ctrl'
+      first: 'Alt',
+      classes: ['button-selected'],
     },
     {
-        first: '&#8592'
+      first: 'Ctrl',
+      classes: ['button-selected'],
     },
     {
-        first: '&#8595'
+      first: '&#8592;',
+      classes: ['button-selected'],
     },
     {
-        first: '&#8594'
-    }
-]
+      first: '&#8595;',
+      classes: ['button-selected'],
+    },
+    {
+      first: '&#8594;',
+      classes: ['button-selected'],
+    },
+  ],
+];
+
+export default data;
