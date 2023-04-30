@@ -8,9 +8,11 @@ const handleButton = () => {
       const buttonFirstTextArr = Array.from(buttonFirstText);
 
       buttonFirstTextArr.forEach((item) => {
+
         if (item.innerText === event.key.toLocaleUpperCase()) {
           button.classList.add('button-keydown');
         }
+
       });
     });
   });

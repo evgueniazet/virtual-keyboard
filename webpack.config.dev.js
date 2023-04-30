@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const commonConfig = require('./webpack.config.common');
 
 module.exports = {
   mode: 'development',
@@ -14,8 +13,14 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader',
-          // 'resolve-url-loader',
           'sass-loader',
+          'resolve-url-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
         ],
       },
       {

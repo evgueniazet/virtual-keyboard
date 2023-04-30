@@ -27,6 +27,22 @@ const addButtons = (array) => {
         button.appendChild(buttonSecondText);
         buttonSecondText.append(item.second);
       }
+
+      document.addEventListener('keydown', (event) => {
+        if (event.shiftKey && event.altKey) {
+
+          if (item.russian) {
+            if (item.isEnglish) {
+              buttonFirstText.innerHTML = item.russian;
+              item.isEnglish = false;
+            } else {
+              buttonFirstText.innerHTML = item.first;
+              item.isEnglish = true;
+            }
+          }
+        }
+      });
+
     });
   });
 };

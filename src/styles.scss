@@ -23,6 +23,7 @@
 }
 
 .entry-field {
+  display: block;
   border: 2px solid $secondary-dark;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   min-height: 25%;
@@ -39,6 +40,15 @@
   &:focus-visible {
     outline: none;
     border: 3px solid $secondary;
+  }
+
+  &-text {
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $primary;
+    text-align: right;
+    width: 100%;
   }
 }
 
@@ -74,7 +84,6 @@
   width: 80px;
   margin-left: 10px;
   transition: color .5s linear, background-color .5s linear, border .5s linear;
-
 
   &-keydown {
     background-color: $primary;
@@ -114,7 +123,7 @@
 
   &-space {
     position: relative;
-    border: 2px solid $secondary;
+    border: none;
     background-color: $secondary-dark;
     color: $bg;
     font-weight: 600;
