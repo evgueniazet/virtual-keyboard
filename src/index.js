@@ -3,33 +3,42 @@ import addButtons from './scripts/addButtons.js';
 import data from './data.js';
 import handleButton from './scripts/handleButton.js';
 
-const createWrapper = () => {
-  const changeLanguage = 'Press Shift and Alt at the same time to switch the language to English';
-  const body = document.querySelector('body');
+class VirtualKeyboard {
+  constructor() {
+    this.changeLanguage = 'Press Shift and Alt at the same time to switch the language to English';
+    this.createWrapper();
+  }
 
-  const wrapper = document.createElement('section');
-  wrapper.classList.add('wrapper');
-  body.appendChild(wrapper);
+  createWrapper() {
+    const body = document.querySelector('body');
 
-  const header = document.createElement('header');
-  header.classList.add('header');
-  wrapper.appendChild(header);
-  header.append('Virtual Keyboard');
+    this.wrapper = document.createElement('section');
+    this.wrapper.classList.add('wrapper');
+    body.appendChild(this.wrapper);
 
-  const entryField = document.createElement('textarea');
-  entryField.classList.add('entry-field');
-  wrapper.appendChild(entryField);
+    const header = document.createElement('header');
+    header.classList.add('header');
+    this.wrapper.appendChild(header);
+    header.append('Virtual Keyboard');
 
-  const entryFieldText = document.createElement('div');
-  entryFieldText.classList.add('entry-field-text');
-  wrapper.appendChild(entryFieldText);
-  entryFieldText.innerText = changeLanguage;
+    this.entryField = document.createElement('textarea');
+    this.entryField.classList.add('entry-field');
+    this.wrapper.appendChild(this.entryField);
 
-  const keyboardContainer = document.createElement('div');
-  keyboardContainer.classList.add('keyboard-container');
-  wrapper.appendChild(keyboardContainer);
-};
+    this.entryFieldText = document.createElement('div');
+    this.entryFieldText.classList.add('entry-field-text');
+    this.wrapper.appendChild(this.entryFieldText);
+    this.entryFieldText.innerText = this.changeLanguage;
 
-createWrapper();
-addButtons(data);
-handleButton();
+    this.keyboardContainer = document.createElement('div');
+    this.keyboardContainer.classList.add('keyboard-container');
+    this.wrapper.appendChild(this.keyboardContainer);
+
+    addButtons(data);
+    handleButton();
+  }
+}
+
+new VirtualKeyboard();
+
+alert('Из фич ES6+ использованы классы и деструктуризация');

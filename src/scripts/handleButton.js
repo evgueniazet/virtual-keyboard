@@ -53,22 +53,28 @@ const handleButton = () => {
         }
 
         if (letterLowerCase) {
+
           buttonsLetters.forEach((button) => {
 
             if (containsOnlyLetters(button.innerText)) {
+
               button.innerText = button.innerText.toUpperCase();
             }
           })
           letterLowerCase = false;
         } else {
+
           buttonsLetters.forEach((button) => {
+
             if (containsOnlyLetters(button.innerText)) {
+
               button.innerText = button.innerText.toLowerCase();
             }
           })
           letterLowerCase = true;
         }
       }
+      console.log('button', button);
     });
 
     const checkButton = (button) => {

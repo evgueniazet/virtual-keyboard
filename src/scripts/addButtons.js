@@ -4,40 +4,34 @@ const addButtons = (array) => {
   keyboard.classList.add('keyboard');
   keyboardContainer.appendChild(keyboard);
 
-  array.forEach((element) => {
+  array.forEach((row) => {
     const rowWrapper = document.createElement('div');
     rowWrapper.classList.add('row-wrapper');
     keyboard.appendChild(rowWrapper);
 
-    element.forEach((item) => {
+    row.forEach(({ classes, first, second, russian }) => {
       const button = document.createElement('button');
-      item.classes.forEach((elem) => {
-        button.classList.add(elem);
-      });
+      button.classList.add(...classes);
       rowWrapper.appendChild(button);
 
       const buttonFirstText = document.createElement('span');
       buttonFirstText.classList.add('button-first-text');
       button.appendChild(buttonFirstText);
-      buttonFirstText.innerHTML = item.first;
+      buttonFirstText.innerHTML = first;
 
-      if (item.second) {
+      if (second) {
         const buttonSecondText = document.createElement('span');
         buttonSecondText.classList.add('button-second-text');
         button.appendChild(buttonSecondText);
-        buttonSecondText.append(item.second);
+        buttonSecondText.append(second);
       }
 
       document.addEventListener('keydown', (event) => {
-        if (event.shiftKey && event.altKey) {
-          if (item.russian) {
-            if (item.isEnglish) {
-              buttonFirstText.innerHTML = item.russian;
-              item.isEnglish = false;
-            } else {
-              buttonFirstText.innerHTML = item.first;
-              item.isEnglish = true;
-            }
+        if (event.shiftKey && event.altKey && russian) {
+          if (buttonFirstText.innerHTML === first) {
+            buttonFirstText.innerHTML = russian;
+          } else {
+            buttonFirstText.innerHTML = first;
           }
         }
       });
