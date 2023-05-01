@@ -1,11 +1,9 @@
 const handleButton = () => {
   const buttons = document.querySelectorAll('button');
   const entryField = document.querySelector('.entry-field');
-  const cursorPosition = entryField.selectionStart;
-  console.log('cursorPosition', cursorPosition);
   const buttonsArray = Array.from(buttons);
   let entryFieldString = entryField.innerText;
-  let newStr = '';
+  let letterLowerCase = true;
 
   document.addEventListener('keydown', (event) => {
     buttonsArray.forEach((button) => {
@@ -36,8 +34,8 @@ const handleButton = () => {
         entryFieldString = entryFieldString + text.innerText;
         entryField.innerText = entryFieldString;
       }
+
       if (text.innerHTML === 'Backspace') {
-        // newStr = entryField.innerHTML;
         entryField.innerHTML = entryFieldString.slice(0, -1);
         entryFieldString = entryField.innerHTML;
       }
@@ -45,6 +43,31 @@ const handleButton = () => {
       if (text.innerHTML === 'Tab') {
         entryField.innerHTML = entryFieldString + ' ';
         entryFieldString = entryField.innerHTML;
+      }
+
+      if (text.innerHTML === 'CapsLock') {
+        const buttonsLetters = document.querySelectorAll('.button');
+
+        const containsOnlyLetters = (str) => {
+          return /^[a-zA-Zа-яА-Я]+$/.test(str);
+        }
+
+        if (letterLowerCase) {
+          buttonsLetters.forEach((button) => {
+
+            if (containsOnlyLetters(button.innerText)) {
+              button.innerText = button.innerText.toUpperCase();
+            }
+          })
+          letterLowerCase = false;
+        } else {
+          buttonsLetters.forEach((button) => {
+            if (containsOnlyLetters(button.innerText)) {
+              button.innerText = button.innerText.toLowerCase();
+            }
+          })
+          letterLowerCase = true;
+        }
       }
     });
 
