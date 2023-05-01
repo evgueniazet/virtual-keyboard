@@ -29,20 +29,18 @@
 //   },
 // };
 
-
-
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ExtractCssChunksPlugin = require('extract-css-chunks-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: path.resolve(__dirname, "src/index.js"),
+    index: path.resolve(__dirname, 'src/index.js'),
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
     clean: true,
   },
@@ -62,32 +60,32 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
         generator: {
-          filename: "./images/[hash][ext]",
+          filename: './images/[hash][ext]',
         },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: "asset/resource",
+        type: 'asset/resource',
         generator: {
-          filename: "./fonts/[name][ext]",
+          filename: './fonts/[name][ext]',
         },
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader",
+            loader: 'html-loader',
           },
         ],
       },
-    ]
+    ],
   },
   plugins: [
 
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "/index.html"),
-      chunks: ['index']
+      template: path.resolve(__dirname, '/index.html'),
+      chunks: ['index'],
     }),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin(),
   ],
 };

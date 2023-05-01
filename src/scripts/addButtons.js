@@ -30,7 +30,6 @@ const addButtons = (array) => {
 
       document.addEventListener('keydown', (event) => {
         if (event.shiftKey && event.altKey) {
-
           if (item.russian) {
             if (item.isEnglish) {
               buttonFirstText.innerHTML = item.russian;
@@ -42,7 +41,6 @@ const addButtons = (array) => {
           }
         }
       });
-
     });
   });
 };

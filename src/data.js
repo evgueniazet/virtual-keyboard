@@ -298,10 +298,6 @@ const data = [
       classes: ['button'],
     },
     {
-      first: ']',
-      classes: ['button'],
-    },
-    {
       first: '&#8593;',
       key: 'ArrowUp',
       classes: ['button-selected'],

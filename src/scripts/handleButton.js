@@ -1,3 +1,5 @@
+// import data from "../data";
+
 const handleButton = () => {
   const buttons = document.querySelectorAll('.button');
   const buttonsArray = Array.from(buttons);
@@ -8,11 +10,9 @@ const handleButton = () => {
       const buttonFirstTextArr = Array.from(buttonFirstText);
 
       buttonFirstTextArr.forEach((item) => {
-
         if (item.innerText === event.key.toLocaleUpperCase()) {
           button.classList.add('button-keydown');
         }
-
       });
     });
   });

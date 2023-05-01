@@ -9,14 +9,14 @@
   box-sizing: border-box;
   background-color: $bg;
   height: 100vh;
-  padding: 5%;
+  padding: 15%;
   width: 100vw;
 }
 
 .header {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: $secondary-dark;
-  font-size: 5rem;
+  font-size: 4rem;
   text-transform: uppercase;
   animation: pulsate 3s linear infinite;
   letter-spacing: 0.6rem;
@@ -30,7 +30,7 @@
   width: 100%;
   border-radius: 10px;
   background-color: transparent;
-  margin-top: 4rem;
+  margin-top: 2rem;
   color: $primary;
   font-size: 2rem;
   padding: 20px;
