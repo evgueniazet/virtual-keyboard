@@ -1,8 +1,10 @@
 const handleButton = () => {
   const buttons = document.querySelectorAll('button');
   const entryField = document.querySelector('.entry-field');
+  const cursorPosition = entryField.selectionStart;
+  console.log('cursorPosition', cursorPosition);
   const buttonsArray = Array.from(buttons);
-  let entryFieldString = '';
+  let entryFieldString = entryField.innerText;
   let newStr = '';
 
   document.addEventListener('keydown', (event) => {
@@ -35,8 +37,13 @@ const handleButton = () => {
         entryField.innerText = entryFieldString;
       }
       if (text.innerHTML === 'Backspace') {
-        newStr = entryField.innerHTML;
-        entryField.innerHTML = newStr.slice(0, -1);
+        // newStr = entryField.innerHTML;
+        entryField.innerHTML = entryFieldString.slice(0, -1);
+        entryFieldString = entryField.innerHTML;
+      }
+
+      if (text.innerHTML === 'Tab') {
+        entryField.innerHTML = entryFieldString + ' ';
         entryFieldString = entryField.innerHTML;
       }
     });

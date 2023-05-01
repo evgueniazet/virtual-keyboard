@@ -84,6 +84,14 @@
   width: 80px;
   margin-left: 10px;
   transition: color .5s linear, background-color .5s linear, border .5s linear;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary;
+    color: black;
+    border: none;
+    transition: color .5s linear, background-color .5s linear, border .5s linear;
+  }
 
   &-first-text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -108,6 +116,15 @@
     margin-left: 10px;
     height: 70px;
     width: 80px;
+    cursor: pointer;
+    transition: color .5s linear, background-color .5s linear, border .5s linear;
+
+    &:hover {
+      background-color: $primary;
+      color: black;
+      border: none;
+      transition: color .5s linear, background-color .5s linear, border .5s linear;
+    }
   }
 
   &-backspace {
@@ -126,6 +143,16 @@
     margin-left: 10px;
     height: 70px;
     width: 50%;
+    cursor: pointer;
+    transition: color .5s linear, background-color .5s linear, border .5s linear;
+
+
+    &:hover {
+      background-color: $primary;
+      color: black;
+      border: none;
+      transition: color .5s linear, background-color .5s linear, border .5s linear;
+    }
   }
 
   &-capslock {
