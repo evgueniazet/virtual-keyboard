@@ -146,8 +146,7 @@ const data = [
       classes: ['button'],
     },
     {
-      /* eslint-disable */
-      first: "'\'",
+      first: '&#92;',
       second: '/',
       classes: ['button'],
     },
@@ -239,8 +238,7 @@ const data = [
       value: true,
     },
     {
-      /* eslint-disable */
-      first: "'\'",
+      first: '&#92;',
       classes: ['button'],
     },
     {
