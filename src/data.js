@@ -148,10 +148,11 @@ const data = [
     {
       first: '&#92;',
       second: '/',
+      key: 'Backsplash',
       classes: ['button'],
     },
     {
-      first: 'DEL',
+      first: 'Delete',
       key: 'Delete',
       classes: ['button-selected'],
     },
@@ -233,14 +234,14 @@ const data = [
   [
     {
       first: 'Shift',
-      key: 'Shift',
+      key: 'ShiftLeft',
       classes: ['button-selected', 'button-shift'],
       value: true,
     },
-    {
-      first: '&#92;',
-      classes: ['button'],
-    },
+    // {
+    //   first: '&#92;',
+    //   classes: ['button'],
+    // },
     {
       first: 'z',
       russian: 'я',
@@ -293,6 +294,7 @@ const data = [
     },
     {
       first: '/',
+      key: 'Splash',
       classes: ['button'],
     },
     {
@@ -302,39 +304,39 @@ const data = [
     },
     {
       first: 'Shift',
-      key: 'Shift',
+      key: 'ShiftRight',
       classes: ['button-selected'],
     },
   ],
   [
     {
       first: 'Ctrl',
-      key: 'Control',
+      key: 'ControlLeft',
       classes: ['button-selected'],
     },
     {
       first: 'Win',
-      key: 'Meta',
+      key: 'MetaLeft',
       classes: ['button-selected'],
     },
     {
       first: 'Alt',
-      key: 'Alt',
+      key: 'AltLeft',
       classes: ['button-selected'],
     },
     {
       first: '',
-      key: '',
+      key: 'Space',
       classes: ['button-space'],
     },
     {
       first: 'Alt',
-      key: 'Alt',
+      key: 'AltRight',
       classes: ['button-selected'],
     },
     {
       first: 'Ctrl',
-      key: 'Control',
+      key: 'ControlRight',
       classes: ['button-selected'],
     },
     {

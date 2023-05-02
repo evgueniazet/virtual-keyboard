@@ -9,7 +9,7 @@ const addButtons = (array) => {
     rowWrapper.classList.add('row-wrapper');
     keyboard.appendChild(rowWrapper);
 
-    row.forEach(({ classes, first, second, russian }) => {
+    row.forEach(({ classes, first, second, russian, key }) => {
       const button = document.createElement('button');
       button.classList.add(...classes);
       rowWrapper.appendChild(button);
@@ -24,6 +24,13 @@ const addButtons = (array) => {
         buttonSecondText.classList.add('button-second-text');
         button.appendChild(buttonSecondText);
         buttonSecondText.append(second);
+      }
+
+      if (key) {
+        const keyText = document.createElement('span');
+        keyText.classList.add('key-text');
+        button.appendChild(keyText);
+        keyText.append(key);
       }
 
       document.addEventListener('keydown', (event) => {

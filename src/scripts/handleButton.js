@@ -1,3 +1,5 @@
+import data from "../data";
+
 const handleButton = () => {
   const buttons = document.querySelectorAll('button');
   const entryField = document.querySelector('.entry-field');
@@ -9,14 +11,18 @@ const handleButton = () => {
     buttonsArray.forEach((button) => {
       const buttonFirstText = button.querySelectorAll('.button-first-text');
       const buttonFirstTextArr = Array.from(buttonFirstText);
+      const keyText = button.querySelector('.key-text');
 
       buttonFirstTextArr.forEach((item) => {
-        if (item.innerText === event.key.toLocaleUpperCase()) {
+
+        if (keyText?.innerText === event.code) {
           button.classList.add('button-keydown');
         }
-        if (item.innerText === event.key) {
+
+        if (item.innerText === event.key.toLowerCase()) {
           button.classList.add('button-keydown');
         }
+
       });
     });
   });
@@ -74,7 +80,6 @@ const handleButton = () => {
           letterLowerCase = true;
         }
       }
-      console.log('button', button);
     });
 
     const checkButton = (button) => {

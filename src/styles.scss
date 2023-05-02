@@ -175,6 +175,10 @@
   }
 }
 
+.key-text {
+  display: none;
+}
+
 @keyframes pulsate {
   50% {
     color: $primary;
