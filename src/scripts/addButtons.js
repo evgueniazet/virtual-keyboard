@@ -1,6 +1,7 @@
 const addButtons = (array) => {
   const keyboardContainer = document.querySelector('.keyboard-container');
   const keyboard = document.createElement('div');
+  const language = localStorage.getItem('language');
   keyboard.classList.add('keyboard');
   keyboardContainer.appendChild(keyboard);
 
@@ -17,7 +18,16 @@ const addButtons = (array) => {
       const buttonFirstText = document.createElement('span');
       buttonFirstText.classList.add('button-first-text');
       button.appendChild(buttonFirstText);
+
       buttonFirstText.innerHTML = first;
+
+      if (russian) {
+        if (language === 'english') {
+          buttonFirstText.innerHTML = first;
+        } else {
+          buttonFirstText.innerHTML = russian;
+        }
+      }
 
       if (second) {
         const buttonSecondText = document.createElement('span');
@@ -37,8 +47,10 @@ const addButtons = (array) => {
         if (event.shiftKey && event.altKey && russian) {
           if (buttonFirstText.innerHTML === first) {
             buttonFirstText.innerHTML = russian;
+            localStorage.setItem('language', 'russian');
           } else {
             buttonFirstText.innerHTML = first;
+            localStorage.setItem('language', 'english');
           }
         }
       });

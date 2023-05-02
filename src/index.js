@@ -41,4 +41,4 @@ class VirtualKeyboard {
 
 new VirtualKeyboard();
 
-// alert('Из фич ES6+ использованы классы и деструктуризация');
+alert('Из фич ES6+ использованы классы и деструктуризация');
