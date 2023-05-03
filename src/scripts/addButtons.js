@@ -10,7 +10,9 @@ const addButtons = (array) => {
     rowWrapper.classList.add('row-wrapper');
     keyboard.appendChild(rowWrapper);
 
-    row.forEach(({ classes, first, second, russian, key }) => {
+    row.forEach(({
+      classes, first, second, russian, key,
+    }) => {
       const button = document.createElement('button');
       button.classList.add(...classes);
       rowWrapper.appendChild(button);

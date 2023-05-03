@@ -39,6 +39,7 @@ class VirtualKeyboard {
   }
 }
 
-new VirtualKeyboard();
+const virtualKeyboard = new VirtualKeyboard(data);
+console.log(virtualKeyboard);
 
-alert('Из фич ES6+ использованы классы и деструктуризация');
+alert('Клавиатура сделана под OC Windows, использован ESlint ,Из фич ES6+ использованы классы,деструктуризация и шаблонныe литералами ');

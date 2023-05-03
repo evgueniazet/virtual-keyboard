@@ -1,39 +1,6 @@
-// const path = require('path');
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
-// module.exports = {
-//   mode: 'production',
-//   entry: {
-//     index: path.resolve(__dirname, 'src/index.js'),
-//   },
-//   output: {
-//     filename: 'bundle.[contenthash].js',
-//     path: path.resolve(__dirname, 'dist'),
-//   },
-//   plugins: [
-//     new MiniCssExtractPlugin({
-//       filename: 'style.[contenthash].css',
-//     }),
-//   ],
-//   module: {
-//     rules: [
-//       {
-//         test: /\.scss$/,
-//         use: [
-//           MiniCssExtractPlugin.loader,
-//           'css-loader',
-//           'sass-loader',
-//         ],
-//       },
-//     ],
-//   },
-// };
-
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const ExtractCssChunksPlugin = require('extract-css-chunks-webpack-plugin');
 
 module.exports = {
   entry: {

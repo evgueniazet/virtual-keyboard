@@ -6,6 +6,8 @@ module.exports = {
     browser: true,
   },
   rules: {
-    'no-console': 'off',
+    'import/extensions': [
+      'error', 'ignorePackages',
+    ],
   },
 };
