@@ -1,0 +1,187 @@
+@import './normalize.scss';
+@import './styles/variables.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: $bg;
+  height: 100vh;
+  padding: 15%;
+  width: 100vw;
+}
+
+.header {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: $secondary-dark;
+  font-size: 4rem;
+  text-transform: uppercase;
+  animation: pulsate 3s linear infinite;
+  letter-spacing: 0.6rem;
+}
+
+.entry-field {
+  display: block;
+  border: 2px solid $secondary-dark;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  min-height: 25%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: transparent;
+  margin-top: 2rem;
+  color: $primary;
+  font-size: 2rem;
+  padding: 20px;
+  resize: none;
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    border: 3px solid $secondary;
+  }
+
+  &-text {
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $primary;
+    text-align: right;
+    width: 100%;
+  }
+}
+
+.keyboard-container {
+  width: 100%;
+  border: 2px solid $secondary-dark;
+  border-radius: 10px;
+  margin-top: 3rem;
+  padding: 20px;
+}
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.row-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.button {
+  position: relative;
+  border: 2px solid $secondary;
+  background-color: transparent;
+  border-radius: 6px;
+  padding: 5px 2px;
+  color: $primary;
+  height: 70px;
+  width: 80px;
+  margin-left: 10px;
+  transition: color .5s linear, background-color .5s linear, border .5s linear;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary;
+    color: black;
+    border: none;
+    transition: color .5s linear, background-color .5s linear, border .5s linear;
+  }
+
+  &-first-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  &-second-text {
+    position: absolute;
+    left: 6px;
+    top: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  &-selected {
+    position: relative;
+    border: none;
+    background-color: $secondary-dark;
+    color: $bg;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 5px 2px;
+    margin-left: 10px;
+    height: 70px;
+    width: 80px;
+    cursor: pointer;
+    transition: color .5s linear, background-color .5s linear, border .5s linear;
+
+    &:hover {
+      background-color: $primary;
+      color: black;
+      border: none;
+      transition: color .5s linear, background-color .5s linear, border .5s linear;
+    }
+  }
+
+  &-backspace {
+    width: 120px;
+  }
+
+  &-space {
+    position: relative;
+    border: none;
+    background-color: $secondary-dark;
+    color: $bg;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 5px 2px;
+    margin-left: 10px;
+    height: 70px;
+    width: 50%;
+    cursor: pointer;
+    transition: color .5s linear, background-color .5s linear, border .5s linear;
+
+
+    &:hover {
+      background-color: $primary;
+      color: black;
+      border: none;
+      transition: color .5s linear, background-color .5s linear, border .5s linear;
+    }
+  }
+
+  &-capslock {
+    width: 160px;
+  }
+
+  &-enter {
+    width: 130px;
+  }
+
+  &-shift {
+    width: 110px;
+  }
+
+  &-keydown {
+    background-color: $primary;
+    color: black;
+    border: none;
+    transition: color .5s linear, background-color .5s linear, border .5s linear;
+  }
+}
+
+.key-text {
+  display: none;
+}
+
+@keyframes pulsate {
+  50% {
+    color: $primary;
+    text-shadow: 0 0 5px $primary, 0 0 5px $primary;
+  }
+}
